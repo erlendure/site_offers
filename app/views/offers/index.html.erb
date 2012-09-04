@@ -1,0 +1,49 @@
+<h1>Listing offers</h1>
+
+<div class="tableVertAlign">
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Heading</th>
+    <th>Price</th>
+    <th>Discount</th>
+    <th>Expire date</th>
+    <th>City</th>
+    <th>Street</th>
+    <th>Zip</th>
+    <th>State</th>
+    <th>Phone</th>
+    <th>Terms</th>
+    <th>Details</th>
+    <th>Featured</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @offers.each do |offer| %>
+  <tr>
+    <td><%= offer.company %></td>
+    <td><%= offer.heading %></td>
+    <td><%= offer.price %></td>
+    <td><%= offer.discount %></td>
+    <td><%= offer.expire_date %></td>
+    <td><%= offer.city %></td>
+    <td><%= offer.street %></td>
+    <td><%= offer.zip %></td>
+    <td><%= offer.state %></td>
+    <td><%= offer.phone %></td>
+    <td><%= offer.terms %></td>
+    <td><%= offer.details %></td>
+    <td><%= offer.featured %></td>
+    <td><%= link_to 'Show', offer %></td>
+    <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
+    <td><%= link_to 'Destroy', offer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+
+<br />
+
+<%= link_to 'New Offer', new_offer_path %>

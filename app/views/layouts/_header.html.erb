@@ -1,3 +1,5 @@
+<% offer = Offer.where(:featured => "t").limit(1) %>
+
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
@@ -8,7 +10,7 @@
         <div class="span8">
           <div class="btn-toolbar">
             <div class="btn-group">
-              <button class="btn">Austin</button>
+              <button class="btn"><%= offer[0].city %></button>
               <button class="btn dropdown-toggle" data-toggle="dropdown">
                 <span class="caret"></span>
               </button>

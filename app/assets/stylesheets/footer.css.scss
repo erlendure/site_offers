@@ -1,7 +1,9 @@
 /****************** Footer Style **********************/
+$footer_color: #999999;
+$footer_border: 1px solid;
 
 .footerBlock {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: $footer_border rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   margin-top: 10px;
   padding: 10px 20px;
@@ -17,12 +19,12 @@
   float: left;
   margin-bottom: 10px;
   width: 50%;
-  color: #999999;
+  color: $footer_color;
 }
 
 #footerRight {
   float: left;
-  border-left: 1px solid rgb(217, 217, 217);
+  border-left: $footer_border rgb(217, 217, 217);
   margin-bottom: 10px;
   padding-left: 10px;
   width: 48%;
@@ -36,14 +38,14 @@
   }
 
   a {
-    color: #999999;
+    color: $footer_color;
   }
 }
 
 #footerBottom {
-  border-top: 1px solid #EDEDED;
+  border-top: $footer_border #EDEDED;
   padding-top: 10px;
   clear: both;
   text-align: center;
-  color: #999999;
+  color: $footer_color;
 }
