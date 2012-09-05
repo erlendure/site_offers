@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120904200855) do
+ActiveRecord::Schema.define(:version => 20120905004316) do
 
   create_table "offers", :force => true do |t|
     t.string   "company"
@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(:version => 20120904200855) do
     t.string   "zip"
     t.string   "state"
     t.string   "phone"
-    t.string   "terms"
-    t.string   "details"
+    t.text     "terms",       :limit => 255
+    t.text     "details",     :limit => 255
     t.boolean  "featured"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
 end
